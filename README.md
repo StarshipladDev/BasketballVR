@@ -82,4 +82,4 @@ I plan on this project improving my skills in the following:
 
 >Social Media management and content creation.
 
-!Developed by Starshiplad ![Twitter](https://twitter.com/StarshipladDevp) [Developed by Starshipladdev](LogoFull.png)
+!Developed by Starshiplad ![Twitter](https://twitter.com/StarshipladDevp) ![Developed by Starshipladdev](LogoFull.png)
