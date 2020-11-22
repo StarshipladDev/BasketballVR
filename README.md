@@ -36,7 +36,7 @@ Installation instructions can be found here (Link live as of 22/11/2020) : ![Lin
 
 N/A
 ## View Of Latest Update:
-![Latest](Latest.PNG)
+![Latest](Latest.png)
 
 ## Playing Basketball VR
 
@@ -82,4 +82,4 @@ I plan on this project improving my skills in the following:
 
 >Social Media management and content creation.
 
-!Developed by Starshiplad ![Twitter](https://twitter.com/StarshipladDevp) [Developed by Starshipladdev](LogoFull.PNG)
+!Developed by Starshiplad ![Twitter](https://twitter.com/StarshipladDevp) [Developed by Starshipladdev](LogoFull.png)
