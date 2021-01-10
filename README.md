@@ -10,17 +10,37 @@ Please be aware, desktop browsers open this .apk file in text format.
 
 Installation instructions can be found here (Link live as of 22/11/2020) : ![Link](https://oneirosvr.com/how-to-sideload-apps-on-oculus-quest-oculus-go/)
 
+Links in full:
+https://www.starshiplad.com/bball.apk
+https://oneirosvr.com/how-to-sideload-apps-on-oculus-quest-oculus-go/
+
 
 ## Latest  Build
 
 0.1a - 22/11/2020 - Initial File Dump
 
 ## Latest Update
-0.1a (Initial File Dump) - 22/11/2020
-    > Added README
-    > Add legacy animation character model imported from Blender to make oposition more realistic
-    > Modify Speaker System handling to use 1 Audio source for all audio, so that songs can be stopped and new ones played mid-song
-    > Add 2 New songs (Denzel Curry 'DIET' and Tech N9ne - Sickology 101) for personal enjoyment
+0.2a (Initial File Dump) - 10/01/2021
+    >Add 'RunAnimation' to 'PlayerCharacter' Model so running animation cna be run in between defend animations
+    >Add Collider to basketball court so basketball can interact with basketball court for dribbling
+    >Add Script 'Moveplayeroncollision' to Court collidor so palyer mvoes foward on basketball collision to simulate dribbling
+   	>Modify 'PlayerMoveTowards' so Inbetween conditions to activate a 'gaurd' animation, 'PlayerCharacter' models perform the 'RunAnimation'
+    >Lower Lighting intensity to increase aesthetic
+	>Basketball -> XRDirectInteractor -> 
+		Add 'OnSelectEnter' and 'OnSelectExit' function calls to new
+		script 'BasketballLetGo' to mimic dribbling
+	>Basketball -> BasketBallLetGo.cs ->
+		Add script 'Basketball Let Go' This has functions to perform
+		grabbing a bounced ball and throwing a held ball to handle 
+		dribbling.
+	>Scene->
+		Add new house models to increase immersion.
+		Add Empty 'XRInteractionManger' to meet new XR reqirements.
+	>Court -> Court Collider ->
+		Modify script 'PlayerMoveTowards' to ahve public variables
+		'grabbed' and 'letGo', both edited by Basketball.BasketballLetgo.cs.
+		Ball only bounces if bounced = false & let go true. This prevents
+		Player moving without throwing ball. 
 
 ## Next Update
 
@@ -32,9 +52,8 @@ Installation instructions can be found here (Link live as of 22/11/2020) : ![Lin
 ## Next Build
     *Title:* First Release
     *Summary:* A simple MVP basketball sim, with satisfying dribbling, shooting and point scoring.
-    *Release date:* TBD
-
-N/A
+    *Release date:* End of Feb 2021
+	
 ## View Of Latest Update:
 ![Latest](Latest.png)
 
@@ -45,6 +64,10 @@ Your right hand has a 'catcher' line that you can grab the basketball with at an
 Both hands have grab functions. Simply touch the ball with a hand and press the side-trigger on the controller touching the basketball. Let go of that trigger to release the ball.
 
 Hitting the speaker with a ball will change the current song.
+
+Press the primary button on the right controller to remove the 'Catcher Line'. Press it again to return it.
+
+Dropping the ball near you will move you in the direction you are looking.
 
 Opposition players will move quite close to you so watch out for accidental jump-scares! 
 
@@ -59,7 +82,7 @@ Opposition players will move quite close to you so watch out for accidental jump
 
 * Ball safety-measures ( The ball will always be grab-able ).
 
-* ( Smooth FPS on a mobile oculus quest device. )
+* Smooth FPS on a mobile oculus quest device. 
 
 * ( Opposition players can steal ball and take shots. )
 
@@ -67,7 +90,7 @@ Opposition players will move quite close to you so watch out for accidental jump
 
 * ( Title Page and proper UI. )
 
-* ( Dribbling to move character.)
+*  Dribbling to move character.
 
 
 ## Skill developing
