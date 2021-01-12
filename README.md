@@ -20,8 +20,7 @@ https://oneirosvr.com/how-to-sideload-apps-on-oculus-quest-oculus-go/
 0.1a - 22/11/2020 - Initial File Dump
 
 ## Latest Update
-
-'''
+```
 
 0.2a (Initial File Dump) - 10/01/2021
 
@@ -37,46 +36,44 @@ https://oneirosvr.com/how-to-sideload-apps-on-oculus-quest-oculus-go/
 	
 >Basketball -> XRDirectInteractor -> 
 
-Add 'OnSelectEnter' and 'OnSelectExit' function calls to new
-script 'BasketballLetGo' to mimic dribbling
+>Add 'OnSelectEnter' and 'OnSelectExit' function calls to new script 'BasketballLetGo' to mimic dribbling
 		
 >Basketball -> BasketBallLetGo.cs ->
 	
-Add script 'Basketball Let Go' This has functions to perform
-grabbing a bounced ball and throwing a held ball to handle 
-dribbling.
+>Add script 'Basketball Let Go' This has functions to performgrabbing a bounced ball and throwing a held ball to handle dribbling.
 		
 >Scene->
 	
-Add new house models to increase immersion.
+>Add new house models to increase immersion.
 		
-Add Empty 'XRInteractionManger' to meet new XR reqirements.
+>Add Empty 'XRInteractionManger' to meet new XR reqirements.
 		
 >Court -> Court Collider ->
 	
-Modify script 'PlayerMoveTowards' to have public variables
-'grabbed' and 'letGo', both edited by Basketball.BasketballLetgo.cs.
+>Modify script 'PlayerMoveTowards' to have public variables'grabbed' and 'letGo', both edited by Basketball.BasketballLetgo.cs.
 		
-Ball only bounces if bounced = false & let go true. This prevents
-Player moving without throwing ball. 
+>Modify Ball only bounces if bounced = false & let go true. This prevents Player moving without throwing ball. 
 
-'''
+```
 
+```
 ## Next Update
 
-'''
 0.2a (3-D Model update) Week ending 6/12/2020
  -> Update 3D models in-game
  -> Simple optimization steps
  -> Optimize basketball throwing physics
-'''
+
+```
+
+```
 ## Next Build
 
-'''
 *Title:* First Release
 *Summary:* A simple MVP basketball sim, with satisfying dribbling, shooting and point scoring.
 *Release date:* End of Feb 2021
-'''	
+
+```
 
 ## View Of Latest Update:
 
