@@ -20,42 +20,47 @@ https://oneirosvr.com/how-to-sideload-apps-on-oculus-quest-oculus-go/
 0.1a - 22/11/2020 - Initial File Dump
 
 ## Latest Update
+
+'''
+
 0.2a (Initial File Dump) - 10/01/2021
-    >Add 'RunAnimation' to 'PlayerCharacter' Model so running animation cna be run in between defend animations
+
+>Add 'RunAnimation' to 'PlayerCharacter' Model so running animation cna be run in between defend animations
 	
-    >Add Collider to basketball court so basketball can interact with basketball court for dribbling
+>Add Collider to basketball court so basketball can interact with basketball court for dribbling
 	
-    >Add Script 'Moveplayeroncollision' to Court collidor so palyer mvoes foward on basketball collision to simulate dribbling
+>Add Script 'Moveplayeroncollision' to Court collidor so palyer mvoes foward on basketball collision to simulate dribbling
 	
-   	>Modify 'PlayerMoveTowards' so Inbetween conditions to activate a 'gaurd' animation, 'PlayerCharacter' models perform the 'RunAnimation'
+>Modify 'PlayerMoveTowards' so Inbetween conditions to activate a 'gaurd' animation, 'PlayerCharacter' models perform the 'RunAnimation'
 	
-    >Lower Lighting intensity to increase aesthetic
+>Lower Lighting intensity to increase aesthetic
 	
-	>Basketball -> XRDirectInteractor -> 
-	
-		Add 'OnSelectEnter' and 'OnSelectExit' function calls to new
+>Basketball -> XRDirectInteractor -> 
+
+Add 'OnSelectEnter' and 'OnSelectExit' function calls to new
+script 'BasketballLetGo' to mimic dribbling
 		
-		script 'BasketballLetGo' to mimic dribbling
-		
-	>Basketball -> BasketBallLetGo.cs ->
+>Basketball -> BasketBallLetGo.cs ->
 	
-		Add script 'Basketball Let Go' This has functions to perform
-		grabbing a bounced ball and throwing a held ball to handle 
-		dribbling.
+Add script 'Basketball Let Go' This has functions to perform
+grabbing a bounced ball and throwing a held ball to handle 
+dribbling.
 		
-	>Scene->
+>Scene->
 	
-		Add new house models to increase immersion.
+Add new house models to increase immersion.
 		
-		Add Empty 'XRInteractionManger' to meet new XR reqirements.
+Add Empty 'XRInteractionManger' to meet new XR reqirements.
 		
-	>Court -> Court Collider ->
+>Court -> Court Collider ->
 	
-		Modify script 'PlayerMoveTowards' to have public variables
-		'grabbed' and 'letGo', both edited by Basketball.BasketballLetgo.cs.
+Modify script 'PlayerMoveTowards' to have public variables
+'grabbed' and 'letGo', both edited by Basketball.BasketballLetgo.cs.
 		
-		Ball only bounces if bounced = false & let go true. This prevents
-		Player moving without throwing ball. 
+Ball only bounces if bounced = false & let go true. This prevents
+Player moving without throwing ball. 
+
+'''
 
 ## Next Update
 
