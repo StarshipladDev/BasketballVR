@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
@@ -6,39 +8,28 @@ using UnityEngine;
 public class BallAbove0 : MonoBehaviour
 {
     int i = 0;
-    bool abovePlayerWaist = false;
-    bool bouncing = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     // Update is called once per frame
-    void SetNotBouncing()
+    void Update()
     {
-
-        transform.SetParent(null,true);
-        bouncing = false;
-    }
-        // Update is called once per frame
-        void Update()
-    {
+        /*
         if (bouncing == false)
         {
 
             GameObject playerVR = GameObject.Find("Offset");
-            if (transform.position.y > (playerVR.transform.position.y / 2))
+            if (transform.position.y < 0.2f COMMENT THIS OUT transform.position.y < (playerVR.transform.position.y / 5) || gameObject.Active == true)
             {
-                abovePlayerWaist = true;
-
+                bounceCount++;
             }
-            else
+            else if(bounceCount>0)
             {
-                abovePlayerWaist = false;
-                bouncing = true;
-                Animation anim = GetComponent<Animation>();
-                transform.SetParent(playerVR.transform);
-                anim.Play("JumpBball");
+                if (Math.Abs(playerVR.transform.position.x - transform.position.x) < 0.2f && Math.Abs(playerVR.transform.position.z - transform.position.z) < 0.2f)
+                {
+                    bounceCount = 0;
+                    bouncing = true;
+                    Animation anim = GetComponent<Animation>();
+                    transform.SetParent(playerVR.transform);
+                    anim.Play("JumpBball");
+                }
             }
 
         }
@@ -48,6 +39,8 @@ public class BallAbove0 : MonoBehaviour
             GameObject playerVR = GameObject.Find("Offset");
             playerVR.transform.position += Vector3.forward * Time.deltaTime * 0.5f;
         }
+        
+        */
         i++;
         if (i > 10)
         {

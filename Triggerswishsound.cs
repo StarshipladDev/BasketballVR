@@ -17,7 +17,10 @@ public class Triggerswishsound : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        AudioSource my_Audio = GetComponent<AudioSource>();
-        my_Audio.Play();
+        if (other.gameObject.name.Equals("Basketball"))
+        {
+            AudioSource my_Audio = GetComponent<AudioSource>();
+            my_Audio.Play();
+        }
     }
 }

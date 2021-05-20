@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerBackboard : MonoBehaviour
+public class SpeakerTrigger : MonoBehaviour
 {
     public AudioSource[] sources;
     public AudioSource source;
     public AudioClip source1;
     public AudioClip source2;
     public AudioClip source3;
+    public AudioClip source4;
+
+    public AudioClip source5;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,17 +28,17 @@ public class TriggerBackboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name.Equals("Basketball"))
+        if (other.gameObject.name.Equals("Basketball"))
         {
-            AudioClip my_Audio=null;
+            AudioClip my_Audio = null;
             System.Random rand = new System.Random();
-            int v = rand.Next(4);
+            int v = rand.Next(6);
 
-            Debug.Log("-----------"+v + " was sound"+"------------");
+            Debug.Log("-----------" + v + " was sound" + "------------");
             switch (v)
             {
                 case 0:
@@ -48,13 +51,20 @@ public class TriggerBackboard : MonoBehaviour
                     my_Audio = source3;
                     break;
                 case 3:
+                    my_Audio = source4;
+                    break;
+                case 4:
                     my_Audio = null;
+                    break;
+
+                case 5:
+                    my_Audio = source5;
                     break;
             }
             source.Stop();
             source.clip = my_Audio;
-            source.Play() ;
+            source.Play();
         }
-        
+
     }
 }
