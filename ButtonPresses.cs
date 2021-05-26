@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+using UnityEngine.SceneManagement;
 public class ButtonPresses : MonoBehaviour
 {
 
     private InputDevice rightController;
     bool lazerOut = true;
     public GameObject myPrefab;
-
+    bool hasLoaded = false;
     // This script will simply instantiate the Prefab when the game starts.
     void Start()
     {
@@ -38,6 +39,21 @@ public class ButtonPresses : MonoBehaviour
         {
             swapRay();
         }
+        rightController.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButton);
+        if (primaryButtonValue)
+        {
+            if (lazerOut)
+            {
+                Destroy(GameObject.Find("lazer"));
+                lazerOut = false;
+            }
+            Scene scene = SceneManager.GetActiveScene();
+            if (!hasLoaded && scene.name !=null && scene.name != "Scene2")
+            {
+                SceneManager.LoadScene(1);
+                hasLoaded = true;
+            }
+        }
     }
 
     void swapRay()
@@ -56,8 +72,6 @@ public class ButtonPresses : MonoBehaviour
             GameObject lazer = Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             lazer.transform.SetParent(playerVR.transform, false);
             lazer.name = "lazer";
-
-
         }
     }
 }
